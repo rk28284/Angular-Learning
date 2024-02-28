@@ -19,8 +19,10 @@
     }
 //  in this there is no add and deattch from function so we will addlisten load 
     // window.onload=init
-    window.addEventListener("load",init)
-    window.removeEventListener("load",init)
+    // window.addEventListener("load",init)
+    // window.removeEventListener("load",init)
+//angular uses dom content load
+    document.addEventListener("DOMContentLoaded",init)
    </script>
 </body>
 </html>

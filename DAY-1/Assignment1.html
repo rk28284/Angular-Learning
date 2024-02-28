@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun1() {
+    console.log("Function 1 called on body.onload");
+}
+
+function fun2() {
+    console.log("Function 2 called on window.addEventListener('load')");
+}
+
+function fun3() {
+    console.log("Function 3 called on document.addEventListener('DOMContentLoaded')");
+}
+// Call fun1 on body.onload
+document.body.onload = fun1;
+
+// Call fun2 on window.addEventListener("load")
+window.addEventListener("load", fun2);
+
+// Call fun3 on document.addEventListener("DOMContentLoaded")
+document.addEventListener("DOMContentLoaded", fun3);
+//in console i get fun3 fastest and then fun 1 then fun 2
+//fun3>fun1>fun2
+    </script>
+</body>
+</html>

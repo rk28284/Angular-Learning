@@ -8,11 +8,13 @@
 //get and set
 class Hero {
     // -------------------------------------------------
-    constructor(ntitle) {
+    constructor(ntitle, nfirstname, nlastname) {
         this.title = "Batman";
         this._firstname = "Bruce";
         this._lastname = "wyane";
         this.title = ntitle;
+        this._firstname = nfirstname;
+        this._lastname = this.lastname;
     }
     //--------------------------------------------------------
     get firstname() {

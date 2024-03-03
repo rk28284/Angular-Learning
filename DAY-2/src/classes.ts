@@ -16,8 +16,10 @@
     private _lastname:string="wyane"
     static version:Number=1001
     // -------------------------------------------------
-    constructor(ntitle:string){
-this.title=ntitle
+    constructor(ntitle:string,nfirstname:string,nlastname:string){
+this.title=ntitle;
+this._firstname=nfirstname;
+this._lastname=this.lastname
     }
 
     //--------------------------------------------------------

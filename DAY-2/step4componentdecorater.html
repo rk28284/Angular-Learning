@@ -8,7 +8,9 @@
 <script>
     document.addEventListener("DOMContentLoaded",function(){
         let mycomp=new MyComp()
-        document.getElementsByTagName(mycomp.selector)[0].innerHTML=mycomp.template.replace("{{title}}",mycomp.title)
+       
+       
+        document.getElementsByTagName(mycomp.selector)[0].innerHTML=mycomp.template.replace("{{title}}",mycomp.title).replace("{{ power }}",mycomp.power)
     })
 </script>
 </head>

@@ -31,6 +31,7 @@ MyComp = __decorate([
    <div>
    
    <h2>{{title}}</h2>
+
    <ul>
    
    <li> List  Item 1</li>
@@ -38,7 +39,7 @@ MyComp = __decorate([
    <li> List  Item 3</li>
 
    
-   </ul>
+   </ul>   <h2>{{power}}</h2>
    </div>
    `
     })

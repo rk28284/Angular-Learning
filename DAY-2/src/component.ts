@@ -19,6 +19,7 @@ let Component=function(config:any){
    <div>
    
    <h2>{{title}}</h2>
+
    <ul>
    
    <li> List  Item 1</li>
@@ -26,7 +27,7 @@ let Component=function(config:any){
    <li> List  Item 3</li>
 
    
-   </ul>
+   </ul>   <h2>{{power}}</h2>
    </div>
    `
 })

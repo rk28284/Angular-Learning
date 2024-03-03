@@ -38,19 +38,29 @@
 //         this._lastname=nlastname
 //     }
 //  }
+//super class
+class Person{
+
+    constructor(public canwalk:string){
+
+    }
+}
+
+//interface
 interface IHero{
     title:string;
    fullname():string;
 }
 
 
-class Hero  {
+class Hero extends Person implements IHero  {
     // -------------------------------------------------
     constructor(
         public title:string,
          private _firstname:string, 
-         private _lastname:string) {
-      
+         private _lastname:string,
+         ncw:string) {
+      super(ncw)
         //key Takeway-we can define constructor to public and private property 
     }
     //--------------------------------------------------------
@@ -71,7 +81,9 @@ class Hero  {
     }
 }
 
-let hero = new Hero("ram", "shyam", "shiv");
+let hero = new Hero("ram", "shyam", "shiv","krishna is everything");
 console.log(hero.title);
 console.log(hero.firstname);
+console.log(hero.canwalk);
+
  

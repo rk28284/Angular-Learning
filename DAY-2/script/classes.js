@@ -31,3 +31,6 @@ class Hero {
     }
 }
 Hero.version = 1001;
+let hero = new Hero("ram", "shyam", "shiv");
+console.log(hero.title);
+console.log(hero.firstname);

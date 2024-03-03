@@ -38,3 +38,9 @@ this._lastname=this.lastname
         this._lastname=nlastname
     }
  }
+
+ let hero=new Hero("ram","shyam","shiv")
+ console.log(hero.title);
+ console.log(hero.firstname);
+ 
+ 

@@ -38,31 +38,40 @@
 //         this._lastname=nlastname
 //     }
 //  }
-class Hero{
-    static version:Number=1001
+interface IHero{
+    title:string;
+   fullname():string;
+}
+
+
+class Hero  {
     // -------------------------------------------------
-    constructor(public title:string,private _firstname:string,private _lastname:string){
-//key Takeway-we can define constructor to public and private property 
+    constructor(
+        public title:string,
+         private _firstname:string, 
+         private _lastname:string) {
+      
+        //key Takeway-we can define constructor to public and private property 
     }
-
     //--------------------------------------------------------
-    get firstname(){
-       return this._firstname
+    fullname(){
+     return  this._firstname+" "+this._lastname
     }
+    get firstname() {
+        return this._firstname;
+    }
+    set firstname(nfirstname) {
+        this._firstname = nfirstname;
+    }
+    get lastname() {
+        return this._lastname;
+    }
+    set lastname(nlastname) {
+        this._lastname = nlastname;
+    }
+}
 
-    set firstname(nfirstname:string){
-        this._firstname=nfirstname
-    }
-
-    get lastname(){
-        return this._lastname
-    }
-    set lastname(nlastname:string){
-        this._lastname=nlastname
-    }
- }
- let hero=new Hero("ram","shyam","shiv")
- console.log(hero.title);
- console.log(hero.firstname);
- 
+let hero = new Hero("ram", "shyam", "shiv");
+console.log(hero.title);
+console.log(hero.firstname);
  

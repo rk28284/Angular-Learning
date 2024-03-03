@@ -12,6 +12,7 @@ let Component = function (config) {
             constructor() {
                 this.title = tc.title;
                 this.power = config.power;
+                this.selector = config.selector;
                 this.template = config.template;
             }
         };

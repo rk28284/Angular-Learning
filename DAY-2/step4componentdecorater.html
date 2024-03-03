@@ -8,7 +8,7 @@
 <script>
     document.addEventListener("DOMContentLoaded",function(){
         let mycomp=new MyComp()
-        mycomp.selector=document.getElementsByTagName("app-root")[0]
+        document.getElementsByTagName(mycomp.selector)[0].innerHTML=mycomp.template.replace("{{title}}",mycomp.title)
     })
 </script>
 </head>

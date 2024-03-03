@@ -4,6 +4,7 @@ let Component=function(config:any){
         return class{
             title:string=tc.title;
             power:number=config.power;
+            selector:string=config.selector
             template:string=config.template
         }
     }

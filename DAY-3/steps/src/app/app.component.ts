@@ -5,9 +5,9 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  template: '<div><h1>Welcome To First angular Project</h1></div><rakesh-comp></rakesh-comp>',
-
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'helloworld';
+  title = 'steps';
 }

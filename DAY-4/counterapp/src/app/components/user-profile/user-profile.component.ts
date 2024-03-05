@@ -15,4 +15,5 @@ name="Rakesh"
 age=25
 salary=120000
 status="single"
+isBtndisable=false
 }

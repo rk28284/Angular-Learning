@@ -1,11 +1,29 @@
 <p>user-profile works!</p>
 
-<h1>Name:-{{name}}</h1>
-<h1>Age:-{{age}}</h1>
-<h1>Salary:-{{salary}}</h1>
-<h1>Status:-{{status}}</h1>
+<h5>Name:-{{name}}</h5>
+<h5>Age:-{{age}}</h5>
+<h5>Salary:-{{salary}}</h5>
+<h5>Status:-{{status}}</h5>
 
 
 
 <!-- button disable can be done with dynamically with squre button -->
+<!-- Note:-
+properties will be bind in squre bracket
+ev will be bind in squre bracket -->
+<!-- property binding -->
 <button  [disabled]="isBtndisable">Click Me</button>
+<br>
+<!-- how to event binding -->
+<input type="text"  (input)="onChange($event)">
+<br>
+<br>
+<h4>Input :-{{inputVal}}</h4>
+<p>Two data binding</p>
+<!-- how to two ways data binding -->
+<!-- method-1 -->
+<!-- <input type="text" [value]="inputVal" (input)="onChange($event)"> -->
+
+<!-- method-2 -->
+<!--this ia called bnana [()] in the box-->>
+<input type="text" [(ngModel)]="inputVal">

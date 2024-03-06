@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -6,7 +7,8 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [FormsModule],
+  // common module used when we use directive
+  imports: [FormsModule,CommonModule],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })
@@ -19,9 +21,9 @@ status="single"
 isBtndisable=false
 inputVal="test"
 
-users=[{name:"Rakesh",age:25,salary:120000,status:"single"},
-{name:"Payal",age:22,salary:110000,status:"single"},
-{name:"Shyam",age:26,salary:1200000,status:"married"},
+users=[{name:"Rakesh",age:25,salary:1200,status:"single"},
+{name:"Payal",age:22,salary:1100,status:"single"},
+{name:"Shyam",age:26,salary:1600,status:"married"},
 ]
 onChange(e:Event){
 let value=(e.target as HTMLInputElement).value

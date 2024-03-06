@@ -32,8 +32,21 @@ ev will be bind in squre bracket -->
 <!-- iterate value from array -->
 <br>
 <div style="border: 1px solid red;">
+   
     @for(user of users;track user.name){
-        <h3>Name:-{{user.name}} Age:-{{user.age}} Salary:-{{user.salary}}  Status:-{{user.status}}</h3>
+        <!-- we can apply condition also there -->
+        @if(user.salary>=1200){
+            <h3>Name:-{{user.name}} Age:-{{user.age}} Salary:-{{user.salary}}  Status:-{{user.status}}</h3>
+
+        }else{
+            <h3>Name:-{{user.name}} Age:-{{user.age}} Salary:-hidden  Status:-{{user.status}}</h3>
+ 
+        }
 
     }
+</div>
+<hr>
+<div *ngFor="let user of users" >
+    <h3>Name:-{{user.name}} Age:-{{user.age}} Salary:-{{user.salary}}  Status:-{{user.status}}</h3>
+
 </div>

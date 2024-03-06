@@ -27,3 +27,13 @@ ev will be bind in squre bracket -->
 <!-- method-2 -->
 <!--this ia called bnana [()] in the box-->>
 <input type="text" [(ngModel)]="inputVal">
+
+
+<!-- iterate value from array -->
+<br>
+<div style="border: 1px solid red;">
+    @for(user of users;track user.name){
+        <h3>Name:-{{user.name}} Age:-{{user.age}} Salary:-{{user.salary}}  Status:-{{user.status}}</h3>
+
+    }
+</div>

@@ -19,6 +19,10 @@ status="single"
 isBtndisable=false
 inputVal="test"
 
+users=[{name:"Rakesh",age:25,salary:120000,status:"single"},
+{name:"Payal",age:22,salary:110000,status:"single"},
+{name:"Shyam",age:26,salary:1200000,status:"married"},
+]
 onChange(e:Event){
 let value=(e.target as HTMLInputElement).value
   console.log(value);

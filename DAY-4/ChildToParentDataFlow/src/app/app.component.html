@@ -1,0 +1,9 @@
+<h1>ChildToParent File</h1>
+<app-user-list 
+ *ngFor="let user of users"
+  [username]="user.username"
+   [isSingle]="user.isSingle" 
+   [Salary]="user.Salary"
+   (myEvent)="receiveData($event)"
+   
+   ></app-user-list> 

@@ -1,0 +1,49 @@
+<p>user-profile works!</p>
+
+<h1 appHighlighter>Name:-{{name|uppercase}} Age:-{{age}} Salary:-{{salary|currency}} Status:-{{status}}
+
+    PhoneNumber:-{{PhoneNumber|countryCode:"USA"}}
+</h1>
+
+
+
+<!-- button disable can be done with dynamically with squre button -->
+<!-- Note:-
+properties will be bind in squre bracket
+ev will be bind in squre bracket -->
+<!-- property binding -->
+<button  [disabled]="isBtndisable">Click Me</button>
+<br>
+<!-- how to event binding -->
+<input type="text"  (input)="onChange($event)">
+<br>
+<br>
+<h4>Input :-{{inputVal}}</h4>
+<p>Two data binding</p>
+<!-- how to two ways data binding -->
+<!-- method-1 -->
+<!-- <input type="text" [value]="inputVal" (input)="onChange($event)"> -->
+
+<!-- method-2 -->
+<!--this ia called bnana [()] in the box-->>
+<input type="text" [(ngModel)]="inputVal">
+
+
+<!-- iterate value from array -->
+<!-- <br>
+<div style="border: 1px solid red;">
+   
+    @for(user of users;track user.name){ -->
+        <!-- we can apply condition also there -->
+        <!-- @if(user.salary>=1200){
+            <h3>Name:-{{user.name}} Age:-{{user.age}} Salary:-{{user.salary}}  Status:-{{user.status}}</h3>
+
+        }
+
+    }
+</div>
+<hr> -->
+<!-- <div *ngFor="let user of users" >
+    <h3>Name:-{{user.name}} Age:-{{user.age}} Salary:-{{user.salary}}  Status:-{{user.status}}</h3>
+
+</div> -->

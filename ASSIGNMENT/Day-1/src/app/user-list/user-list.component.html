@@ -1,0 +1,33 @@
+<h1>Implement A Custom Directive </h1>
+<h1 appHighlighter >Name:-{{name}} Age:-{{age}} Salary:-{{salary}} Status:-{{status}}
+
+    PhoneNumber:-{{PhoneNumber}}
+</h1>
+
+<div appHighlighter>
+   
+    @for(user of users;track user.name){ 
+        <!-- we can apply condition also there -->
+    
+            <h3>Name:-{{user.name}} Age:-{{user.age}} Salary:-{{user.salary}}  Status:-{{user.status}}</h3>
+
+        
+
+    }
+    </div>
+
+<hr>
+   
+    <h1 appUpperCase>Implement A UpperCase Directive </h1>
+
+    <div>
+   
+        @for(user of data;track user.name){ 
+            <!-- we can apply condition also there -->
+        
+                <h3>Name:-{{user.name}} Weight:-{{user.weight}}</h3>
+    
+            
+    
+        }
+        </div>

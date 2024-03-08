@@ -1,0 +1,21 @@
+
+<h1>{{pageTitle}}</h1>
+<hr>
+<h2>Question-1</h2>
+<p>Answer:-</p>
+<h2>Sum of Number {{a}} + {{b}} = {{a+b}}</h2>
+<h3>Add 10 to the sum of these two numbers = {{a+b+10}}</h3>
+<hr>
+<h2>Question-2</h2>
+<img [src]="url" alt="">
+<button (click)="togglebtn()" [disabled]="isDisable">{{isDisable?"Button Disable":"Click Button to Disable"}}</button>
+<hr>
+<h2>Question-3</h2>
+<button (click)="handleButtonClick()">Click me</button>
+<hr>
+<h2>Question-4</h2>
+<h4>Input:-{{inputVal}}</h4>
+<input type="text" (input)="onChange($event)" placeholder="Type User name here">
+<hr>
+<h2>Question-5</h2>
+

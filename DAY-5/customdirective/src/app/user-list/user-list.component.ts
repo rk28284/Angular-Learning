@@ -22,7 +22,7 @@ export class UserListComponent {
   inputVal="test"
   bgColor="red"
   users=[{name:"Rakesh",age:25,salary:1200,status:"single"},
-  {name:"Payal",age:22,salary:1100,status:"single"},
+  {name:"ram",age:22,salary:1100,status:"single"},
   {name:"Shyam",age:26,salary:1600,status:"married"},
   ]
   onChange(e:Event){

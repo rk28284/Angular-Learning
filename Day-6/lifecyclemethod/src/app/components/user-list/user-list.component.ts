@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HighlighterDirective } from '../directives/highlighter.directive';
+import { HighlighterDirective } from '../../directives/highlighter.directive';
 
 @Component({
   selector: 'app-user-list',

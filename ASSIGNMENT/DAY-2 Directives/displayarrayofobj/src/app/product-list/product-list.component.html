@@ -1,0 +1,31 @@
+
+
+<!-- <div *ngFor="let item of products">
+    <h1>
+      NAME: {{ item.name }} PRICE: {{ item.price }} 
+      <span [style.color]="item.available ? 'green' : 'red'">
+        Stock: {{ item.available ? 'Available' : 'Not Available' }}
+      </span>
+      <hr>
+    </h1>
+  </div> -->
+
+  <div *ngFor="let item of products">
+    <div *ngIf=" item.available;  else notavailable" style="color: green;">
+        <h1>
+            NAME: {{ item.name }} PRICE: {{ item.price }}  Stock: Available
+            </h1>
+            <hr>
+    </div>
+<ng-template #notavailable>
+        <div style="color: red;">
+            <h1>
+                NAME: {{ item.name }} PRICE: {{ item.price }} 
+               
+                  Stock:Not Available
+            </h1>
+                <hr>
+        </div>
+    </ng-template>
+  </div>
+  

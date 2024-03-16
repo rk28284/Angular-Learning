@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+.navbar {
+    background-color:teal ; /* Navbar background color */
+    overflow: hidden;
+}
+
+/* Style for the links */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2; /* Text color */
+    text-align: center;
+    padding: 14px 20px; /* Padding around links */
+    text-decoration: none;
+    font-size: 16px; /* Font size */
+}
+
+/* Style for the active link */
+.navbar a.active {
+    background-color:teal ;/* Background color for active link */
+    color: white; /* Text color for active link */
+}
+
+/* Hover effect */
+.navbar a:hover {
+    background-color:teal ; /* Background color on hover */
+    color: black; /* Text color on hover */
+}

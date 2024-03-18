@@ -6,7 +6,6 @@ import { B2Component } from '../b2/b2.component';
   selector: 'app-b1',
   standalone: true,
   imports: [B2Component],
-  providers:[CounterService],
   templateUrl: './b1.component.html',
   styleUrl: './b1.component.css'
 })

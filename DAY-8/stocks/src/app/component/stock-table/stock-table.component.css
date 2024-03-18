@@ -1,0 +1,59 @@
+
+  .circular-icon {
+    display: inline-block;
+    width: 24px; 
+    height: 24px; 
+    text-align: center;
+    line-height: 24px; 
+    border-radius: 50%; 
+    background-color:teal;
+  }
+  .adjust-icon {
+    font-size: 1.2rem ;
+    margin-left: 0.25rem
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    color:#121D2F;
+    background-color: #02111d; /* Light blue background color */
+  }
+  .ltpcoloradjust{
+    color:#121D2F;
+  }
+  
+  
+  
+  .badge {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+    h5 {
+    margin: 0;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .red {
+    color: red;
+  }
+  

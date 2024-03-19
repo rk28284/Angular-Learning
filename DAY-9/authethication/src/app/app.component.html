@@ -1,0 +1,51 @@
+<!-- <input type="text"> -->
+<!-- <h1>{{myFirstformcontrol.value}}</h1> -->
+
+
+<form action="" (ngSubmit)="Submit()" [formGroup]="userProfileform" >
+<label for="">First Name:
+
+  <input type="text" formControlName="firstName">
+</label>
+<br>
+<label for="">Last Name:
+
+  <input type="text" formControlName="lastName">
+</label>
+<br>
+<label for="">email:
+
+  <input type="text" formControlName="email">
+</label>
+<br>
+<label for="">password:
+
+  <input type="text" formControlName="password">
+</label>
+<br>
+<div formGroupName="address">
+  <label for="">houseNo:
+
+    <input type="text" formControlName="houseNo">
+  </label>
+
+  <label for="">city:
+
+    <input type="text" formControlName="city">
+  </label>
+
+  <label for="">pincode:
+
+    <input type="text" formControlName="pinCode">
+  </label>
+
+  <label for="">State:
+
+    <input type="text" formControlName="State">
+  </label>
+</div>
+<button type="submit" [disabled]="!userProfileform.valid">submit</button>
+<button (click)="updateData()">Patch data from backend</button>
+</form>
+
+<router-outlet></router-outlet>

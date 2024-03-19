@@ -1,0 +1,8 @@
+<div class="product" *ngFor="let product of products" [ngStyle]="getStyle(product)">
+    <h1>{{product.name}}</h1>
+     <p>{{product.price}}</p>
+     <p *ngIf="product.available; else notAvailable" >Available</p>
+     <ng-template #notAvailable>
+        <p>Not Available</p>
+     </ng-template>
+</div>

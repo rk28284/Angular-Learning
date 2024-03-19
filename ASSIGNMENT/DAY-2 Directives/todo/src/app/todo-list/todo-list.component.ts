@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.css',
 })
@@ -45,4 +46,11 @@ export class TodoListComponent {
       completed: true,
     },
   ];
+  searchQuery: string = '';
+  
+  get filteredTodos() {
+    return this.todos.filter(todo =>
+      todo.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+    );
+  }
 }

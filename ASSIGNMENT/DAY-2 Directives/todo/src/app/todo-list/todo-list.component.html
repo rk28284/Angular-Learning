@@ -1,21 +1,21 @@
-<div *ngFor="let item of  todos">
-<table>
-    <tr>
+<div>
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search by title">
+  </div>
+  
+  <div *ngFor="let item of filteredTodos">
+    <table>
+      <tr>
         <ng-container *ngIf="item.completed; else notCompleted">
-            <td><h4>{{item.title}}--</h4></td>
-
-            <td><h4>{{item.description}}--</h4></td>
-    
-            <td style="color: green;"><h4>Completed</h4></td>
+          <td><h4>{{item.title}}--</h4></td>
+          <td><h4>{{item.description}}--</h4></td>
+          <td style="color: green;"><h4>Completed</h4></td>
         </ng-container>
-       <ng-template    #notCompleted>
-        <td><h4>{{item.title}}--</h4></td>
-
-        <td><h4>{{item.description}}--</h4></td>
-
-        <td style="color: red;"><h4>Not Completed</h4></td>
-       </ng-template>
-    </tr>
-</table>
-
-</div>
+        <ng-template #notCompleted>
+          <td><h4>{{item.title}}--</h4></td>
+          <td><h4>{{item.description}}--</h4></td>
+          <td style="color: red;"><h4>Not Completed</h4></td>
+        </ng-template>
+      </tr>
+    </table>
+  </div>
+  

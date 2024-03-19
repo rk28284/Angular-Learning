@@ -8,7 +8,17 @@ import { Component, Input } from '@angular/core';
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
+export class Product {
+  
+  name: string;
+  price: number;
+  available: boolean;
 
+  constructor(name: string, price: number, available: boolean) {
+    this.name = name;
+    this.price = price;
+    this.available = available;
+  }
 }
 export class ProductListComponent {
   @Input() products:Product[]=[];
@@ -22,16 +32,4 @@ export class ProductListComponent {
     }
   }
 
-}
-export class Product {
-  
-  name: string;
-  price: number;
-  available: boolean;
-
-  constructor(name: string, price: number, available: boolean) {
-    this.name = name;
-    this.price = price;
-    this.available = available;
-  }
 }

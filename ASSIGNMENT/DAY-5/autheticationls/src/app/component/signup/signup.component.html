@@ -1,0 +1,30 @@
+<div class="custom-container">
+    <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+    
+        <div class="custom-form-group">
+          <label for="email">Email</label>
+          <input type="email" class="custom-form-control" id="email" formControlName="email" placeholder="Enter your email" required>
+          <div *ngIf="signupForm.get('email')?.status !== 'VALID'" class="custom-error-message">
+            Email is required 
+          </div>
+        </div>
+        <div class="custom-form-group">
+          <label for="password">Password</label>
+          <input type="password" class="custom-form-control" id="password" formControlName="password" placeholder="Enter your password" required>
+          <div *ngIf="signupForm.get('password')?.status !== 'VALID'" class="custom-error-message">
+            password must be 8 characters
+          </div>
+        </div>
+        <div class="custom-form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" class="custom-form-control" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm your password" required>
+          <div *ngIf="signupForm.get('confirmPassword')?.status !== 'VALID'" class="custom-error-message">
+            Confirm Password must be 8 characters
+          </div>
+          <div *ngIf="signupForm.errors?.['PasswordNoMatch']" class="custom-error-message">
+            Confirm Password & Password must be same
+          </div>
+        </div>
+        <button type="submit" class="custom-btn btn-primary" [disabled]="signupForm.invalid">Sign Up</button>
+      </form>
+</div>

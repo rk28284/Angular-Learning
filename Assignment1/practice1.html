@@ -3,48 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      border-bottom: 1px dotted black;
-    }
-    
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 120px;
-      background-color: black;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 5px 0;
-    
-      /* Position the tooltip */
-      position: absolute;
-      z-index: 1;
-    }
-    
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-    }
+    <title>Tooltip Positions</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Tooltip on Hover */
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Tooltip Positions */
+        .tooltip.top .tooltiptext {
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip.bottom .tooltiptext {
+            top: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip.left .tooltiptext {
+            top: 50%;
+            right: 125%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip.right .tooltiptext {
+            top: 50%;
+            left: 125%;
+            transform: translateY(-50%);
+        }
     </style>
-<body style="text-align:center;">
+</head>
+<body>
 
-    <h2>Basic Tooltip</h2>
-    
-    <p>Move the mouse over the text below:</p>
-    
-    <div class="tooltip">Hover over me
-      <span class="tooltiptext">Tooltip text</span>
+    <h2>Tooltip Positions</h2>
+    <p>Hover over the buttons to see the tooltips.</p>
+
+    <div class="tooltip top">
+        <button>Top Tooltip</button>
+        <span class="tooltiptext">Tooltip on Top</span>
     </div>
-    
-    <p>Note that the position of the tooltip text isn't very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.</p>
-    
-    </body>
+<br>
+    <div class="tooltip bottom">
+        <button>Bottom Tooltip</button>
+        <span class="tooltiptext">Tooltip on Bottom</span>
+    </div>
+<br>
+    <div class="tooltip left">
+        <button>Left Tooltip</button>
+        <span class="tooltiptext">Tooltip on Left</span>
+    </div>
+<br>
+    <div class="tooltip right">
+        <button>Right Tooltip</button>
+        <span class="tooltiptext">Tooltip on Right</span>
+    </div>
+
+</body>
 </html>
-
-
-
-

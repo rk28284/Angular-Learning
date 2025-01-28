@@ -9,23 +9,20 @@
       <hr>
     </h1>
   </div> -->
+  <span>Search</span>:-<input type="search" [(ngModel)]="searchText"  name="search" id="" aria-label="search">
+  <table>
+    <tr *ngFor="let item of products |filter=searchText">
+      <ng-container *ngIf="item.available; else notAvailable">
+        <td >{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td style="color: green;">Available</td>
+      </ng-container>
+      <ng-template #notAvailable>
+        <td >{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td style="color: red;">Not Available</td>
+      </ng-template>
+    </tr>
+  </table>
 
-  <div *ngFor="let item of products">
-    <div *ngIf=" item.available;  else notavailable" style="color: green;">
-        <h1>
-            NAME: {{ item.name }} PRICE: {{ item.price }}  Stock: Available
-            </h1>
-            <hr>
-    </div>
-<ng-template #notavailable>
-        <div style="color: red;">
-            <h1>
-                NAME: {{ item.name }} PRICE: {{ item.price }} 
-               
-                  Stock:Not Available
-            </h1>
-                <hr>
-        </div>
-    </ng-template>
-  </div>
   

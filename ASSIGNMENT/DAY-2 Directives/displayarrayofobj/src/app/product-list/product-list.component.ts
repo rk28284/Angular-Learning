@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { SearchitemPipe } from '../pile/searchitem.pipe';
+import { NgModel } from '@angular/forms';
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,SearchitemPipe],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css',
 })
@@ -21,4 +23,5 @@ export class ProductListComponent {
     { name: 'Smartwatch', price: 150, available: true },
     { name: 'External Hard Drive', price: 120, available: true },
   ];
+  searchText :any
 }
